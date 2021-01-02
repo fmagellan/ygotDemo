@@ -1,0 +1,39 @@
+module employee {
+
+namespace "urn:employee";
+
+prefix "employee";
+
+container employees {
+    list employee {
+        key "name";
+
+        leaf name {
+            type leafref {
+                path "../config/name";
+            }
+        }
+
+        container config {
+            leaf name {
+                type string;
+            }
+
+            leaf age {
+                type uint32;
+            }
+        }
+
+        container state {
+            leaf name {
+                type string;
+            }
+
+            leaf age {
+                type uint32;
+            }
+        }
+    }
+}
+
+}

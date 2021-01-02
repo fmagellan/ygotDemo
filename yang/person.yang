@@ -1,0 +1,17 @@
+module people {
+
+namespace "urn:people";
+
+prefix "people";
+
+container person {
+    leaf name {
+        type string;
+    }
+
+    leaf age {
+        type uint32;
+    }
+}
+
+}
